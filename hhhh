@@ -1,2 +1,38 @@
+ @1: Code Guidelines
+Naming Conventions: file_parser.h (Line 26) - Used snake_case for the function name is_date_line to improve readability and follow C++ standard library style.
 
-@@1
+File Headers: order_processor.cpp (Line 1-6) - Included a header with author and date to facilitate code maintenance and version tracking.
+
+Const Correctness: order.h (Line 33) - Used the const keyword for get_time() to guarantee the function does not modify the object's state.
+ 
+
+
+
+
+
+ @3: Doxygen Documentation
+Location: file_parser.h (Line 30-38)
+
+Explanation: Used a /** comment block with @param and @return tags. This structure allows Doxygen to automatically parse the comments and generate HTML documentation.
+ 
+@4: Make Targets
+Location: Makefile (Line 33-34)
+
+xplanation: The target %.o uses the -c flag to compile source files into object files without linking. This achieves separate compilation, so only modified files need to be recompiled.
+ 
+@5: Calculations
+Location: order_processor.cpp (Line 106-107, 97)
+
+Explanation: total_money is accumulated when a delivery is completed (Line 107). If no rider is found (nullptr), missed_orders is incremented (Line 97).
+
+@6: Testing
+1.Logic Test: test_order.cpp (Line 29) - Verifies that order pricing logic is correct (2.0 vs 3.0).
+
+2.Boundary Test: test_riders.cpp (Line 63) - Verifies the 2-mile distance limit for bicycle riders.
+
+3.State Test: test_order.cpp (Line 91) - Verifies that missed_orders increments correctly when resources are exhausted.
+ 
+@7: Validation
+Location: file_parser.cpp (Line 72-76)
+
+Explanation: The code uses if (distance <= 0) to check if the distance is positive. This prevents invalid data from entering the system and causing calculation errors.
