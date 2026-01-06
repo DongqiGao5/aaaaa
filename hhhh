@@ -5,7 +5,25 @@ File Headers: order_processor.cpp (Line 1-6) - Included a header with author and
 
 Const Correctness: order.h (Line 33) - Used the const keyword for get_time() to guarantee the function does not modify the object's state.
  
-@2 wite a minute
+ @2: Git Commits
+
+Example 1: Project Setup
+
+Message: "Initial commit: Added Makefile"
+
+Explanation: I committed the Makefile early (18/12/2025) to ensure the code could compile from the start.
+
+Example 2: Feature Implementation
+
+Message: "Implement Order_Processor class"
+
+Explanation: This commit (20/12/2025) focused on a single feature, keeping the history clean and atomic.
+
+Example 3: Testing
+
+Message: "Added unit tests for pricing"
+
+Explanation: I committed tests (22/12/2025) immediately after coding to verify the logic worked.
 
 
 
